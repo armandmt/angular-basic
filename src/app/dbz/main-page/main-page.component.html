@@ -7,17 +7,18 @@
         <h3>Personatges</h3>
         <hr>
         <ul>
-            <li> Krillin - 700 </li>
-            <li>Goku - 15000</li>
-            <li>Vegeta - 8500</li>
+            <li *ngFor="let item of personatges">
+                {{ item.nom }} - {{ item.poder | number}}
+            </li>
+           
         </ul>
     </div>
-    <div class="col">
+    <div class="col"> 
         <h3>Afegir</h3>
         <hr>
         <form (ngSubmit)="afegir()">
-            <input type="text" placeholder="Nom" />
-            <input type="number" placeholder="Poder" />
+            <input name="nom" [(ngModel)]="nou.nom" type="text" placeholder="Nom" />
+            <input name="poder" [(ngModel)]="nou.poder" type="number" placeholder="Poder" />
 
             <button type="submit">
                 Afegir 
