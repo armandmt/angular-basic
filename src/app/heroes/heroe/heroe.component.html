@@ -1,0 +1,19 @@
+<h1> Soc el component Heroe: {{nom}} </h1>
+
+<dl>
+    <td>Nom: </td>
+    <dd>{{ nom }} </dd>
+
+    <td>Edat: </td>
+    <dd>{{ edat }} </dd>
+
+    <td>Funció: </td>
+    <dd>{{ obtenirNom() }} </dd>
+
+    <td>Capitalitzat: </td>
+    <dd>{{ nomCapitalitzat }} </dd>
+
+</dl> 
+
+<button (click)="canviarNom()">Canviar Heroi</button>
+<button (click)="canviarEdat()">Canvia edat</button>

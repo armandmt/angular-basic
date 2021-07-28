@@ -1,0 +1,19 @@
+<h3>llistat D'Herois!</h3>
+<ul>
+    <li *ngFor="let item of heroes; let i = index">
+        {{ i+1 }} - {{ item }}
+    </li>
+</ul>
+<h3 *ngIf="heroisCaiguts.length >0 else noEsborrat">Herois Caiguts</h3>
+<ng-template #noEsborrat >
+    <h3> Encara no has esborrat res !! </h3>
+</ng-template>
+<ul>
+    <li *ngFor="let item of heroisCaiguts; let i = index">
+        {{ i + 1 }} - {{ item }}
+    </li>
+    
+
+</ul>
+
+<button (click)="esborrarHeroi()">Esborrar</button>
