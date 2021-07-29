@@ -1,0 +1,11 @@
+<h3>Afegir</h3>
+        <hr>
+        <form (ngSubmit)="afegir()">
+            <input name="nom" [(ngModel)]="nou.nom" type="text" placeholder="Nom" />
+            <input name="poder" [(ngModel)]="nou.poder" type="number" placeholder="Poder" />
+
+            <button type="submit">
+                Afegir 
+            </button>
+
+        </form>

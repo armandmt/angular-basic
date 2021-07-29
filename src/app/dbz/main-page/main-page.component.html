@@ -4,26 +4,22 @@
 
 
     <div class="col">
-        <h3>Personatges</h3>
+        <app-personatges > </app-personatges>
+        <!-- <h3>Personatges</h3>
         <hr>
         <ul>
             <li *ngFor="let item of personatges">
                 {{ item.nom }} - {{ item.poder | number}}
             </li>
            
-        </ul>
+        </ul> -->
     </div>
     <div class="col"> 
-        <h3>Afegir</h3>
-        <hr>
-        <form (ngSubmit)="afegir()">
-            <input name="nom" [(ngModel)]="nou.nom" type="text" placeholder="Nom" />
-            <input name="poder" [(ngModel)]="nou.poder" type="number" placeholder="Poder" />
+        <app-afegirh 
+        [nou]="nou"
+        >
+    
+        </app-afegirh>
 
-            <button type="submit">
-                Afegir 
-            </button>
-
-        </form>
     </div>
 </div>
